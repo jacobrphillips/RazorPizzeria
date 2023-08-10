@@ -25,6 +25,8 @@ namespace RazorPizzeria.Pages.Forms
             if (Pizza.Pineapple) PizzaPrice += 100000;
             if (Pizza.Ham) PizzaPrice += 1;
             if (Pizza.Beef) PizzaPrice += 1;
+
+            return RedirectToPage("/Checkout/Checkout", new {Pizza.PizzaName, PizzaPrice});
         }
     }
 }
